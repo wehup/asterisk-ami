@@ -1,0 +1,18 @@
+{
+    "name": "wehup/asterisk-ami",
+    "description": "Wehup Asterisk AMI",
+    "license": "MIT",
+    "authors": [
+        {"name": "Rafael Kassner", "email": "kassner@gmail.com"}
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.3",
+        "guzzle/http": "3.7.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        }
+    }
+}
