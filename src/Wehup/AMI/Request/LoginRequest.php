@@ -10,6 +10,15 @@ namespace Wehup\AMI\Request;
 class LoginRequest implements RequestInterface
 {
 
+    protected $username;
+    protected $secret;
+
+    public function __construct($username, $secret)
+    {
+        $this->username = $username;
+        $this->secret = $secret;
+    }
+
     public function getAction()
     {
         return 'Login';
@@ -18,8 +27,8 @@ class LoginRequest implements RequestInterface
     public function getParams()
     {
         return array(
-            'Username' => 'admin',
-            'Secret' => 'admin'
+            'Username' => $this->username,
+            'Secret' => $this->secret
         );
     }
 
