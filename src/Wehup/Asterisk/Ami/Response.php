@@ -9,6 +9,7 @@ class Response
     const AUTHENTICATION_ACCEPTED = 2;
     const AUTHENTICATION_FAILED = 3;
     const PERMISSION_DENIED = 4;
+    const SUCCESS = 5;
 
     protected $status;
     protected $data = array();

@@ -38,8 +38,13 @@ class ResponseFactory
             return $response;
         }
 
-        var_dump($bodyText);
-        die;
+        if (preg_match('/Response: Success/', $bodyText)) {
+            $response->setStatus(Response::SUCCESS);
+            $response->addData('raw', $bodyText);
+            return $response;
+        }
+
+        die($bodyText);
 
         return $response;
     }
