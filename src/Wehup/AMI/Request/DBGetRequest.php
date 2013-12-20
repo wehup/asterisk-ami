@@ -4,6 +4,7 @@ namespace Wehup\AMI\Request;
 
 /**
  * @returns DBEntryResponse
+ * @returns InvalidDBEntryResponse
  * @returns PermissionDeniedResponse
  */
 class DBGetRequest implements RequestInterface
@@ -29,6 +30,16 @@ class DBGetRequest implements RequestInterface
             'Family' => $this->family,
             'Key' => $this->key
         );
+    }
+
+    public function getFamily()
+    {
+        return $this->family;
+    }
+
+    public function getKey()
+    {
+        return $this->key;
     }
 
 }

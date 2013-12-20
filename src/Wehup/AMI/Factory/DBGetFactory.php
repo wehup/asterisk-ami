@@ -28,6 +28,10 @@ class DBGetFactory implements FactoryInterface
                 return $response;
             }
         }
+        
+        if (preg_match('#^Response: Error\r\nMessage: Database entry not found#', $body)) {
+            return new Response\InvalidDBEntryResponse($this->request->getFamily(), $this->request->getKey());
+        }
 
         throw new Exception\UnexpectedResponseException();
     }
