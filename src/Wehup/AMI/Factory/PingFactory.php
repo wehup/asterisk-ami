@@ -2,6 +2,8 @@
 
 namespace Wehup\AMI\Factory;
 
+use Wehup\AMI\Response;
+
 class PingFactory implements FactoryInterface
 {
 
@@ -14,7 +16,13 @@ class PingFactory implements FactoryInterface
 
     public function createResponse(\Guzzle\Http\Message\Response $response)
     {
-        return new \Wehup\AMI\Response\PingResponse();
+        $body = $response->getBody(true);
+
+        if (preg_match('#^Response: Error\r\nMessage: Permission denied#', $body)) {
+            return new Response\PermissionDeniedResponse();
+        }
+
+        return new Response\PingResponse();
     }
 
 }
