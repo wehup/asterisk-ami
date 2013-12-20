@@ -5,9 +5,17 @@ namespace Wehup\AMI;
 class Manager
 {
 
+    /**
+     * @var \Guzzle\Http\ClientInterface
+     */
     protected $httpClient;
 
-    public function __construct($host, $port, $prefix = null)
+    /**
+     * @param string $host
+     * @param int $port
+     * @param string $prefix
+     */
+    public function __construct($host, $port = 8088, $prefix = null)
     {
         $url = "http://{$host}:{$port}/";
 
@@ -39,18 +47,26 @@ class Manager
         return $response;
     }
 
+    /**
+     * @param \Wehup\AMI\Request\RequestInterface $request
+     * @return \Wehup\AMI\Response\ResponseInterface
+     */
     protected function sendRequest(Request\RequestInterface $request)
     {
         $httpRequest = $this->createHttpRequest($request);
         $httpResponse = $httpRequest->send();
 
-        throw new \Exception('To implement.');
-        $factory = $this->createFactory($request);
+        $factory = FactoryProvider::getFactoryByRequest($request);
         $response = $factory->createResponse($httpResponse);
 
         return $response;
     }
 
+    /**
+     * 
+     * @param \Wehup\AMI\Request\RequestInterface $request
+     * @return \Guzzle\Http\Message\Response
+     */
     protected function createHttpRequest(Request\RequestInterface $request)
     {
         $httpRequest = $this->httpClient->get('rawman');
