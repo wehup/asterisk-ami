@@ -9,7 +9,7 @@ class PingResponse implements ResponseInterface
 
     public function getTime()
     {
-        return $time;
+        return $this->time;
     }
 
     public function setTime($time)
