@@ -6,6 +6,12 @@ PHP 5.3 abstraction of Asterisk 1.6 AMI
 Installation
 ------------
 
+Add to your `composer.json`:
+
+    {"require":{
+        "wehup/asterisk-ami": "dev-master"
+    }}
+
 Run:
 
     composer install
