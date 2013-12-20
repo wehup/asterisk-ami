@@ -12,7 +12,7 @@ class PingResponse implements ResponseInterface
         return $this->time;
     }
 
-    public function setTime($time)
+    public function setTime(\DateTime $time)
     {
         $this->time = $time;
     }
