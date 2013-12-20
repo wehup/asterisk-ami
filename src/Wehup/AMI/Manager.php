@@ -16,6 +16,11 @@ class Manager
     protected $loginRequest;
 
     /**
+     * @var string
+     */
+    protected $cookie;
+
+    /**
      * @param string $host
      * @param int $port
      * @param string $prefix
@@ -51,6 +56,7 @@ class Manager
             $loginResponse = $this->sendRequest($loginRequest);
 
             if ($loginResponse instanceof Response\AuthenticationAcceptedResponse) {
+                $this->cookie = $loginResponse->getCookie();
                 return $this->sendRequest($request);
             }
         }
@@ -81,6 +87,7 @@ class Manager
     protected function createHttpRequest(Request\RequestInterface $request)
     {
         $httpRequest = $this->httpClient->get('rawman');
+        $httpRequest->addCookie('mansession_id', $this->cookie);
 
         foreach ($request->getParams() as $key => $value) {
             $httpRequest->getQuery()->set($key, $value);
