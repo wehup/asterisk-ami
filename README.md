@@ -24,3 +24,14 @@ Usage
     
     // Send request
     $response = $manager->send($request);
+
+Supported commands
+------------------
+
+* [DBDel](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_DBDel)
+* [DBDelTree](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_DBDelTree)
+* [DBGet](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_DBGet)
+* [DBPut](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_DBPut)
+* [ListCommands](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_ListCommands)
+* [Login](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_Login)
+* [Ping](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_Ping)
