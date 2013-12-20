@@ -3,7 +3,7 @@
 namespace Wehup\AMI\Request;
 
 /**
- * @returns ListCommandsResponse
+ * @returns DBEntryResponse
  * @returns PermissionDeniedResponse
  */
 class DBGetRequest implements RequestInterface

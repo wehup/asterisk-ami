@@ -3,7 +3,7 @@
 namespace Wehup\AMI\Request;
 
 /**
- * @returns ListCommandsResponse
+ * @returns SuccessResponse
  * @returns PermissionDeniedResponse
  */
 class DBPutRequest implements RequestInterface
