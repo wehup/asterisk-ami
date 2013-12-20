@@ -13,6 +13,13 @@ class DBPutRequest implements RequestInterface
     protected $key;
     protected $value;
 
+    public function __construct($family, $key, $value)
+    {
+        $this->family = $family;
+        $this->key = $key;
+        $this->value = $value;
+    }
+
     public function getAction()
     {
         return 'DBPut';

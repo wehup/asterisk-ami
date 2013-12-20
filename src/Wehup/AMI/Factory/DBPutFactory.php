@@ -22,20 +22,8 @@ class DBPutFactory implements FactoryInterface
             return new Response\PermissionDeniedResponse();
         }
 
-        die($body);
-
-        if (preg_match('#^Response: Success\r\n#', $body)) {
-            $response = new Response\CommandListResponse();
-
-            $data = explode("\r\n", $body);
-            array_shift($data);
-
-            foreach ($data as $row) {
-                $match = explode(':', $row, 2);
-                $response->addCommand($match[0], trim($match[1]));
-            }
-
-            return $response;
+        if (preg_match('#^Response: Success\r\nMessage: Updated database successfully#', $body)) {
+            return new Response\SuccessResponse();
         }
 
         throw new Exception\UnexpectedResponseException();
