@@ -2,7 +2,7 @@
 
 namespace Wehup\AMI;
 
-class Manager
+class Manager implements ManagerInterface
 {
 
     /**
