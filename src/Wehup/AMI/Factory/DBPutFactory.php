@@ -27,6 +27,10 @@ class DBPutFactory implements FactoryInterface
             return new Response\SuccessResponse();
         }
 
+        if (preg_match('#^Response: Error\r\nMessage: No family specified#', $body)) {
+            return new Response\DBNoFamilySpecifiedResponse();
+        }
+
         throw new Exception\UnexpectedResponseException($body);
     }
 
