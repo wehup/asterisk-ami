@@ -1,6 +1,8 @@
 {
     "name": "wehup/asterisk-ami",
+    "type": "library",
     "description": "Wehup Asterisk AMI",
+    "keywords": ["asterisk", "ami", "voip", "telephony"],
     "license": "MIT",
     "authors": [
         {"name": "Rafael Kassner", "email": "kassner@gmail.com"}
