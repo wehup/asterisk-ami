@@ -33,7 +33,7 @@ class LoginFactory implements FactoryInterface
             return new Response\PermissionDeniedResponse();
         }
 
-        throw new Exception\UnexpectedResponseException();
+        throw new Exception\UnexpectedResponseException($body);
     }
 
 }

@@ -3,6 +3,7 @@
 namespace Wehup\AMI\Factory;
 
 use Wehup\AMI\Response;
+use Wehup\AMI\Exception;
 
 class DBGetFactory implements FactoryInterface
 {
@@ -33,7 +34,7 @@ class DBGetFactory implements FactoryInterface
             return new Response\InvalidDBEntryResponse($this->request->getFamily(), $this->request->getKey());
         }
 
-        throw new Exception\UnexpectedResponseException();
+        throw new Exception\UnexpectedResponseException($body);
     }
 
 }

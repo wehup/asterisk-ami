@@ -3,6 +3,7 @@
 namespace Wehup\AMI\Factory;
 
 use Wehup\AMI\Response;
+use Wehup\AMI\Exception;
 
 class ListCommandsFactory implements FactoryInterface
 {
@@ -36,7 +37,7 @@ class ListCommandsFactory implements FactoryInterface
             return $response;
         }
 
-        throw new Exception\UnexpectedResponseException();
+        throw new Exception\UnexpectedResponseException($body);
     }
 
 }

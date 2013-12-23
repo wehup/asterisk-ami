@@ -3,6 +3,7 @@
 namespace Wehup\AMI\Factory;
 
 use Wehup\AMI\Response;
+use Wehup\AMI\Exception;
 
 class DBDelTreeFactory implements FactoryInterface
 {
@@ -26,7 +27,7 @@ class DBDelTreeFactory implements FactoryInterface
             return new Response\SuccessResponse();
         }
 
-        throw new Exception\UnexpectedResponseException();
+        throw new Exception\UnexpectedResponseException($body);
     }
 
 }
