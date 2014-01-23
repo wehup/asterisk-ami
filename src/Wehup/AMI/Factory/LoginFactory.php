@@ -33,6 +33,10 @@ class LoginFactory implements FactoryInterface
             return new Response\PermissionDeniedResponse();
         }
 
+        if (preg_match('#^Response: Error\r\nMessage: Authentication failed#', $body)) {
+            return new Response\AuthenticationFailedResponse();
+        }
+
         throw new Exception\UnexpectedResponseException($body);
     }
 
