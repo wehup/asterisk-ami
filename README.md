@@ -34,6 +34,7 @@ Usage
 Supported commands
 ------------------
 
+* [Command](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_Command)
 * [DBDel](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_DBDel)
 * [DBDelTree](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_DBDelTree)
 * [DBGet](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_DBGet)
