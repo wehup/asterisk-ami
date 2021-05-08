@@ -2,6 +2,6 @@
 
 include '_bootstrap.php';
 
-$request = new Wehup\AMI\Request\SIPPeersRequest();
+$request = new Wehup\AMI\Request\SIPpeersRequest();
 $response = $manager->send($request);
 var_dump($response);
