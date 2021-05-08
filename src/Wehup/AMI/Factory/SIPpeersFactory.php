@@ -33,9 +33,8 @@ class SIPpeersFactory implements FactoryInterface
 
             foreach ($data as $row) {
                 if (preg_match('#^Event: PeerEntry\r\n#', $row)) {
-                    $entry = explode("\r\n", $row); 
-                                        
-                    array_filter($entry);
+                    $entry = array_filter(explode("\r\n", $row)); 
+                                                            
                     array_shift($entry);                                                            
 
                     $response->addPeer($entry);
