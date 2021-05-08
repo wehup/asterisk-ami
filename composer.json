@@ -10,7 +10,8 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.3",
-        "guzzle/http": "3.7.*"
+        "guzzle/http": "3.7.*",
+        "symfony/event-dispatcher": "~2.7"
     },
     "autoload": {
         "psr-0": {
