@@ -43,5 +43,6 @@ Supported commands
 * [Login](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_Login)
 * [Ping](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_Ping)
 * [SIPpeers](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_SIPpeers)
+* [SIPshowpeer](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_SIPshowpeer)
 
 Are you missing support to an useful command? Open an [issue](https://github.com/wehup/asterisk-ami/issues/new), so we can add it.
