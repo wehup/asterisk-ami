@@ -24,7 +24,7 @@ class PingFactory implements FactoryInterface
         }
 
         if (preg_match('#^Response: Success\r\nPing: Pong\r\nTimestamp: ([0-9.]+)#', $body, $matches)) {
-            $response = new Response\PingResponse($datetime);
+            $response = new Response\PingResponse();
             $response->setTime(\DateTime::createFromFormat('U.u', $matches[1]));
             return $response;
         }
