@@ -43,6 +43,7 @@ Supported commands
 * [Login](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_Login)
 * [Ping](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_Ping)
 * [QueueAdd](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_QueueAdd)
+* [QueueRemove](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_QueueRemove)
 * [SIPpeers](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_SIPpeers)
 * [SIPshowpeer](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_SIPshowpeer)
 
