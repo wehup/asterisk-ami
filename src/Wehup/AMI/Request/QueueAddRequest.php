@@ -3,8 +3,10 @@
 namespace Wehup\AMI\Request;
 
 /**
- * @returns QueueAddResponse
  * @returns PermissionDeniedResponse
+ * @returns QueueInterfaceAlreadyThereResponse
+ * @returns NoSuchQueueResponse
+ * @returns SuccessResponse
  */
 class QueueAddRequest implements RequestInterface
 {
