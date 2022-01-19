@@ -31,9 +31,6 @@ class QueueRemoveFactory implements FactoryInterface
             return new Response\QueueInterfaceNotThereResponse();
         }
 
-        var_dump($body);
-        die();
-
         if (preg_match('#^Response: Success\r\n#', $body)) {
             return new Response\SuccessResponse();
         }
