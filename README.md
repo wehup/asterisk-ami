@@ -44,6 +44,7 @@ Supported commands
 * [Ping](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_Ping)
 * [QueueAdd](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_QueueAdd)
 * [QueueRemove](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_QueueRemove)
+* [QueueStatus](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_QueueStatus)
 * [SIPpeers](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_SIPpeers)
 * [SIPshowpeer](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_SIPshowpeer)
 
