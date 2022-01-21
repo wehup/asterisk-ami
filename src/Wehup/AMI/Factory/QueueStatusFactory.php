@@ -35,9 +35,9 @@ class QueueStatusFactory implements FactoryInterface
                 if (preg_match('#^Event: QueueParams\r\n#', $row)) $response->addQueue($row);                                    
                 if (preg_match('#^Event: QueueMember\r\n#', $row)) $response->addMember($row);                                    
                 if (preg_match('#^Event: QueueEntry\r\n#', $row)) $response->addCaller($row);                                    
-            }
+            }            
 
-            return $response;
+            return count($response->getQueues()) == 0 ? new Response\NoSuchQueueResponse() : $response;
         }
 
         throw new Exception\UnexpectedResponseException($body);
