@@ -39,6 +39,7 @@ Supported commands
 * [DBDelTree](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_DBDelTree)
 * [DBGet](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_DBGet)
 * [DBPut](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_DBPut)
+* [Hangup](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_Hangup)
 * [ListCommands](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_ListCommands)
 * [Login](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_Login)
 * [Ping](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_Ping)
@@ -48,5 +49,6 @@ Supported commands
 * [QueuePause](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_QueuePause)
 * [SIPpeers](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_SIPpeers)
 * [SIPshowpeer](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_SIPshowpeer)
+* [UserEvent](https://wiki.asterisk.org/wiki/display/AST/ManagerAction_UserEvent)
 
 Are you missing support to an useful command? Open an [issue](https://github.com/wehup/asterisk-ami/issues/new), so we can add it.
