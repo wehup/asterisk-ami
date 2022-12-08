@@ -7,18 +7,22 @@ Installation
 ------------
 
 Add to your `composer.json`:
-
+```json
     {"require":{
         "wehup/asterisk-ami": "dev-master"
     }}
+```
 
 Run:
+```sh
 
     composer install
+```
 
 Usage
 -----
 
+```php
     // Create the LoginRequest
     $loginRequest = new \Wehup\AMI\Request\LoginRequest('username', 'password');
     
@@ -30,6 +34,7 @@ Usage
     
     // Send request
     $response = $manager->send($request);
+```
 
 Supported commands
 ------------------
